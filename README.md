@@ -125,7 +125,7 @@ let transporter = nodemailer.createTransport({
 
 let mailOptions = {
     from: '"发送者昵称" <地址@126.com>', // 发送者昵称和地址
-    to: 'like@vince.studio', // 接收者的邮箱地址
+    to: '13554342109@163.com', // 接收者的邮箱地址
     subject: '一封暖暖的小邮件', // 邮件主题
     text: 'test mail',  //邮件的text
     // html: html  //也可以用html发送  
@@ -293,23 +293,23 @@ function sendMail(HtmlData) {
 
 ``` javascript
 //纪念日
-let startDay = "2016/6/24";
+let startDay = "2017/1/19";
 
 //当地拼音,需要在下面的墨迹天气url确认
-const local = "xiangtan";
+const local = "shenzhen";
 
 //发送者邮箱厂家
-let EmianService = "163";
+let EmianService = "qq";
 //发送者邮箱账户SMTP授权码
 let EamilAuth = {
-  user: "xxxxxx@163.com",
+  user: "xxxxxx@qq.com",
   pass: "xxxxxx"
 };
 //发送者昵称与邮箱地址
-let EmailFrom = '"name" <xxxxxx@163.com>';
+let EmailFrom = '"name" <xxxxxx@qq.com>';
 
 //接收者邮箱地
-let EmailTo = "like@vince.studio";
+let EmailTo = "13554342109@163.com";
 //邮件主题
 let EmailSubject = "一封暖暖的小邮件";
 

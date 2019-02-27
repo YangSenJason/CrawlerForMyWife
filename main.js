@@ -1,5 +1,5 @@
 const superagent = require("superagent"); //发送网络请求获取DOM
-require('superagent-proxy')(superagent);
+//require('superagent-proxy')(superagent);
 const cheerio = require("cheerio"); //能够像Jquery一样方便获取DOM节点
 const nodemailer = require("nodemailer"); //发送邮件的node插件
 const ejs = require("ejs"); //ejs模版引擎
@@ -43,7 +43,7 @@ const WeatherUrl = "https://tianqi.moji.com/weather/china/guangdong/" + local;
 // 获取ONE内容
 function getOneData(){
     let p = new Promise(function(resolve,reject){
-        superagent.get(OneUrl).proxy(proxy).end(function(err, res) {
+        superagent.get(OneUrl).end(function(err, res) {
             if (err) {
                 reject(err);
             }
@@ -72,7 +72,7 @@ function getOneData(){
 // 获取天气提醒
 function getWeatherTips(){
     let p = new Promise(function(resolve,reject){
-        superagent.get(WeatherUrl).proxy(proxy).end(function(err, res) {
+        superagent.get(WeatherUrl).end(function(err, res) {
             if (err) {
                 reject(err);
             }
@@ -93,7 +93,7 @@ function getWeatherTips(){
 // 获取天气预报
 function getWeatherData(){
     let p = new Promise(function(resolve,reject){
-        superagent.get(WeatherUrl).proxy(proxy).end(function(err, res) {
+        superagent.get(WeatherUrl).end(function(err, res) {
             if (err) {
                 reject(err);
             }
@@ -148,8 +148,7 @@ function sendMail(HtmlData) {
       service: EmianService,
       port: 465,
       secureConnection: true,
-      auth: EamilAuth,
-      proxy: "http://eproxy.sz.intech:3128"
+      auth: EamilAuth
     });
   
     let mailOptions = {
