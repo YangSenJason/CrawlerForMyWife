@@ -8,7 +8,7 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 
 //設置代理，在host前面加上賬號密碼，如：xxxx:xxxx@
-const proxy = `http://jasonyang:mp5Pvdhx@eproxy.sz.intech:3128`;
+const proxy = `http://eproxy.sz.intech:3128`;
 
 //设置省份代码与对应名称
 const provinceCode = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10'
