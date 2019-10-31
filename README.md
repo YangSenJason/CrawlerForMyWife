@@ -288,7 +288,7 @@ function sendMail(HtmlData) {
 ## 安装与使用
 如果你觉得这封邮件的内容适合你发送的对象，可以按照以下步骤，改少量参数即可运行程序；
 
-1. git clone https://github.com/YangSenJason/NodeMail
+1. git clone https://github.com/yasseryang/CrawlerForMyWife
 2. 打开main.js，修改配置项
 
 ``` javascript
@@ -317,5 +317,5 @@ let EmailSubject = "一封暖暖的小邮件";
 let EmailHour = 6;
 let EmialMinminute= 30;
 ```
-3. 终端输入`npm install`安装依赖，再输入`node main.js`，运行脚本，当然你的电脑不可能不休眠，建议你部署到你的云服务器上运行。
+3. 终端输入`npm install`安装依赖，再输入`node main.js`或者`pm2 main.js`，运行脚本，当然你的电脑不可能不休眠，建议你部署到你的云服务器上运行。
 
